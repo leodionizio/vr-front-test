@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        app: [header, footer, root_app]
+        app: [header, footer, root-app]
 
     steps:
       - name: Checkout repository
