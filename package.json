@@ -1,0 +1,14 @@
+{
+  "name": "vr-front-test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start:header": "yarn --cwd header start",
+    "start:footer": "yarn --cwd footer start",
+    "start:root_app": "yarn --cwd root_app start",
+    "start:all": "concurrently \"yarn --cwd header start\" \"yarn --cwd footer start\" \"yarn --cwd root-app start\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
