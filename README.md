@@ -8,6 +8,16 @@ Este repositório contém o código de um teste de frontend desenvolvido para a 
 
 A arquitetura utilizada é de **microfrontends** com **Module Federation**, onde o `header` e o `footer` são renderizados dinamicamente dentro do `root-app`.
 
+## Ajustes e melhorias
+
+O projeto ainda está em desenvolvimento e as próximas ações serão voltadas para as seguintes tarefas:
+
+- [ ] Testes unitários no `root-app`
+- [ ] Testes de integração no `root-app`
+- [ ] Testes e2e
+- [ ] Gerenciador de versão e changelog
+- [ ] Deploy para produção
+
 ## 📋 Requisitos
 
 Antes de começar, você precisará ter instalado:
