@@ -12,9 +12,9 @@ A arquitetura utilizada é de **microfrontends** com **Module Federation**, onde
 
 O projeto ainda está em desenvolvimento e as próximas ações serão voltadas para as seguintes tarefas:
 
-- [ ] Testes unitários no `root-app`
-- [ ] Testes de integração no `root-app`
-- [ ] Testes e2e
+- [x] Testes unitários no `root-app`
+- [x] Testes de integração no `root-app`
+- [x] Testes e2e
 - [ ] Gerenciador de versão e changelog
 - [ ] Deploy para produção
 
