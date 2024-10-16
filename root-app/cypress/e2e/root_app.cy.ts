@@ -17,7 +17,7 @@ describe("Root App E2E Tests", () => {
 
   it("should show the product list", () => {
     cy.get('[data-cy="product-list"]').should("exist");
-    cy.get('[data-cy="card"]').should("have.length.greaterThan", 0);
+    cy.get('[data-testid="card"]').should("have.length.greaterThan", 0);
   });
 
   it("should handle adding products to cart", () => {
