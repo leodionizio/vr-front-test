@@ -6,5 +6,5 @@ type CardProps = {
 };
 
 export const Card = ({ children }: CardProps) => {
-  return <S.Card>{children}</S.Card>;
+  return <S.Card data-cy="card">{children}</S.Card>;
 };

@@ -18,7 +18,7 @@ export const ProductList = () => {
 
   return (
     <S.Wrapper>
-      <S.Container>
+      <S.Container data-cy="product-list">
         {products.map((product) => (
           <ProductCard key={product.title} product={product} />
         ))}
