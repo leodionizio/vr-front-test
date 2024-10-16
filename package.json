@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "install:all": "yarn && concurrently \"yarn --cwd header install\" \"yarn --cwd footer install\" \"yarn --cwd root-app install\"",
+    "install:all": "yarn install && yarn --cwd header install && yarn --cwd footer install && yarn --cwd root-app install",
     "start:header": "yarn --cwd header start",
     "start:footer": "yarn --cwd footer start",
     "start:root-app": "yarn --cwd root_app start",
