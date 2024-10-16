@@ -7,11 +7,14 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch: # Permitir execução manual
+  workflow_dispatch:
 
 jobs:
-  e2e:
+  install-and-start:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app: [header, footer, root-app]
 
     steps:
       - name: Checkout repository
@@ -22,10 +25,19 @@ jobs:
         with:
           node-version-file: ".nvmrc"
 
-      - name: Install dependecies
-        run: |
-          yarn install:all
+      - name: Clean Yarn cache
+        run: yarn cache clean
 
-      - name: Rodar Cypress E2E Tests
+      - name: Install dependencies for each app
         run: |
-          yarn test:e2e
+          yarn --cwd ${{ matrix.app }} install
+
+      - name: Start app
+        run: |
+          yarn --cwd ${{ matrix.app }} start &
+        env:
+          CI: true
+
+      - name: Run Cypress E2E Tests
+        run: |
+          yarn --cwd root-app test:e2e
