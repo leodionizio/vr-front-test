@@ -27,6 +27,14 @@ O **Root App** é o aplicativo principal do teste de frontend para a **VR Benef�
 
    O aplicativo será servido em `http://localhost:3000` e carregará os microfrontends de `header` e `footer`.
 
+3. **Rodar os testes unitários e de integração**
+
+   Para rodar os testes, execute:
+
+   ```bash
+   yarn test
+   ```
+
 ## 📦 Tecnologias Utilizadas
 
 - **React**: Biblioteca para criação de interfaces.

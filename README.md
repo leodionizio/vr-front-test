@@ -59,6 +59,23 @@ O projeto pode ser executado de maneira simultânea utilizando um script que ini
    - O **footer** será servido em `http://localhost:3002`
    - O **root-app** será servido em `http://localhost:3000` e incluirá os microfrontends de header e footer.
 
+4. **Executar os testes e2e**
+
+   Para executar os testes e2e que estão no `root-app`, você pode usar o comando abaixo:
+
+   ```bash
+   yarn test:e2e
+   ```
+
+   Isso irá iniciar o servidor local para cada um dos apps e executar os testes e2e utilizando o `cypress`.
+
+> Para rodar os testes unitários e de integração é recomendado rodar o comando `yarn test` dentro da pasta de cada um dos apps, pois podem haver configurações específicas para executá-los.
+
+Você pode ver mais detalhes sobre em seus respectivos readmes.
+- [root-app/README.md](./root-app/README.md)
+- [header/README.md](./header/README.md)
+- [footer/README.md](./footer/README.md)
+
 ### Scripts Individuais
 
 Se você preferir iniciar cada app separadamente, pode rodar os seguintes comandos:
@@ -97,6 +114,7 @@ vr-front-test/
 ├── header/       # Microfrontend Header
 ├── footer/       # Microfrontend Footer
 ├── root-app/     # Aplicativo Principal (Root App)
+├── adr.md        # Documentação de decisões técnicas
 ├── package.json  # Configuração do projeto principal
 └── README.md     # Você está aqui!
 ```
@@ -106,6 +124,7 @@ vr-front-test/
 - **React**: Biblioteca para criação de interfaces.
 - **Webpack**: Bundler utilizado para gerenciar a build dos microfrontends.
 - **Jest**: Framework para testes unitários e integração.
+- **Cypress**: Framework para testes end-to-end.
 - **Module Federation**: Integração dos microfrontends no root-app de forma modular e dinâmica.
 - **Concurrently**: Ferramenta para rodar múltiplos scripts simultaneamente.
 - **Yarn**: Gerenciador de pacotes.

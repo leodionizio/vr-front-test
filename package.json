@@ -7,7 +7,8 @@
     "start:header": "yarn --cwd header start",
     "start:footer": "yarn --cwd footer start",
     "start:root-app": "yarn --cwd root_app start",
-    "start:all": "concurrently \"yarn --cwd header start\" \"yarn --cwd footer start\" \"yarn --cwd root-app start\""
+    "start:all": "concurrently \"yarn --cwd header start\" \"yarn --cwd footer start\" \"yarn --cwd root-app start\"",
+    "test:e2e": "yarn start:all & yarn --cwd root-app test:e2e"
   },
   "devDependencies": {
     "concurrently": "^7.0.0"

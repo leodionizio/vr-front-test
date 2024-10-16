@@ -27,6 +27,14 @@ Este é o microfrontend **Footer** que faz parte do teste de frontend para a **V
 
    O microfrontend `footer` será servido em `http://localhost:3002` e pode ser integrado ao root-app.
 
+3. **Rodar os testes unitários e de integração**
+
+   Para rodar os testes, execute:
+
+   ```bash
+   yarn test
+   ```
+
 ## 📦 Tecnologias Utilizadas
 
 - **React**: Biblioteca para criação de interfaces.
