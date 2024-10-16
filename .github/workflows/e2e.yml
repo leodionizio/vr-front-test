@@ -10,12 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  install-and-start:
+  run-tests:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        app: [header, footer, root-app]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -30,11 +26,13 @@ jobs:
 
       - name: Install dependencies for each app
         run: |
-          yarn --cwd ${{ matrix.app }} install
+          yarn install:all
 
-      - name: Start app
+      - name: Start apps
         run: |
-          yarn --cwd ${{ matrix.app }} start &
+          yarn start:header
+          yarn start:footer
+          yarn start:root-app
         env:
           CI: true
 
